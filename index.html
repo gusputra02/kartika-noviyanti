@@ -8,8 +8,8 @@
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/img/gallery/Ucapan.JPG" rel="icon" />
+    <link href="assets/img/gallery/Ucapan.JPG" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -114,7 +114,15 @@
                 langkahmu
               </p>
               <div class="d-flex">
-                <a href="" class="btn-get-started">Mulai</a>
+                <button type="button" class="btn btn-get-started">Mulai</button>
+                <!-- Elemen audio untuk memainkan musik -->
+                <audio id="background-audio" loop>
+                  <source
+                    src="assets/Nyoman Paul - Tunggu Apa Lagi (Official Music Video).mp3"
+                    type="audio/mpeg"
+                  />
+                  Your browser does not support the audio element.
+                </audio>
                 <a
                   href="assets/video/1128.mp4"
                   class="glightbox btn-watch-video d-flex align-items-center"
@@ -177,15 +185,40 @@
               />
             </div>
             <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-              <h3>Selamat ulang tahun, cantikku!</h3>
-              <p class="fst-italic">
-                Semoga semua yang kamu impikan tahun ini bisa terwujud satu per
-                satu. Sehat-sehat terus ya, jangan sering marah-marah sama aku,
-                dan semoga kita makin langgeng. Tetap saling dukung dan sayang
-                ya. Hmm... nggak tahu lagi mau ngetik apa, susah diungkapin
-                gitu, tapi apapun yang baik pasti aku doain dan dukung selalu.
-                Hehe ❤️
+              <h3>
+                Selamat ulang tahun, cantikku!
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="35"
+                  fill="red"
+                  viewBox="0 0 35 35"
+                  style="margin-left: 5px"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </h3>
+              <p class="">
+                ✨Selamat ulang tahun yang ke-23, Sayangku 🥰💖 Rasanya baru
+                kemarin aku mengucapkan selamat ulang tahun, tapi tiba-tiba
+                sudah di tanggal 28 November aja lagi 🥺💞 ✨.
               </p>
+              <p class="">
+                Astungkara semua impian yang diharapkan bisa terwujud ya sayang
+                🥰💖, terutama agar bisa berkembang dan lebih dewasa dalam
+                menghadapi masalah dan tantangan ke depannya. Harapanku juga
+                kita bareng-bareng lulus PNS di kejaksaan tahun ini✨. Ingat
+                juga untuk setia dan sayang satu sama lain ya sayang 😘💖 jangan
+                sampai ada pihak ke-3 di hubungan ini 😮‍💨🥺.
+              </p>
+              <p class="">
+                ✨ I love you forever, Sayangku ✨ Salam hangat penuh cinta,
+                Your cat 🐾💖
+              </p>
+              <p class="text-justify">Salam hangat penuh cinta,</p>
+              <p class="font-weight-bold">Your cat 🐾💖</p>
             </div>
           </div>
           <!-- Features Item -->
@@ -361,8 +394,8 @@
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8 col-sm-12">
-              <div class="ratio ratio-4x3">
+            <div class="col-lg-4 col-md-8 col-sm-12">
+              <div class="ratio ratio-1x1">
                 <video
                   class="embed-responsive-item"
                   controls
@@ -450,6 +483,24 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
+    <!-- JavaScript untuk mengontrol pemutaran audio -->
+    <script>
+      document
+        .querySelector(".btn-get-started")
+        .addEventListener("click", function () {
+          var audio = document.getElementById("background-audio");
+          var button = document.querySelector(".btn-get-started");
+
+          if (audio.paused) {
+            audio.play();
+            button.textContent = "Matikan"; // Ubah teks tombol saat audio diputar
+          } else {
+            audio.pause();
+            audio.currentTime = 0; // Mengembalikan audio ke awal
+            button.textContent = "Mulai"; // Ubah teks tombol saat audio berhenti
+          }
+        });
+    </script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
