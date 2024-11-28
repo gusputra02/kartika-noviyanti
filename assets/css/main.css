@@ -460,7 +460,7 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 1px;
 }
 
 .footer .footer-about .logo img {
@@ -507,30 +507,21 @@ h6 {
   padding-bottom: 12px;
 }
 
-.footer .footer-links {
-  margin-bottom: 30px;
-}
-
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.footer .footer-links ul i {
-  padding-right: 2px;
-  font-size: 12px;
-  line-height: 0;
+  display: flex; /* Atur elemen <li> dalam <ul> agar horizontal */
 }
 
 .footer .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
+  padding: 0 15px; /* Tambahkan jarak horizontal antar item */
+  display: inline-flex; /* Opsional: memastikan item fleksibel */
+  align-items: center; /* Menjaga elemen dalam satu garis */
 }
 
 .footer .footer-links ul li:first-child {
-  padding-top: 0;
+  padding-left: 0; /* Hilangkan padding kiri untuk elemen pertama */
 }
 
 .footer .footer-links ul a {
@@ -591,7 +582,7 @@ h6 {
 }
 
 .footer .copyright {
-  padding: 25px 0;
+  padding: 15px 0;
   border-top: 1px solid
     color-mix(in srgb, var(--default-color), transparent 90%);
 }
@@ -601,7 +592,7 @@ h6 {
 }
 
 .footer .credits {
-  margin-top: 6px;
+  margin-top: 5px;
   font-size: 13px;
 }
 
@@ -1230,6 +1221,23 @@ section,
 }
 
 .gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Video Section
+--------------------------------------------------------------*/
+.video .video-item {
+  overflow: hidden;
+  border-right: 3px solid var(--background-color);
+  border-bottom: 3px solid var(--background-color);
+}
+
+.video .video-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.video .video-item:hover img {
   transform: scale(1.1);
 }
 
